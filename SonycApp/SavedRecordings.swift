@@ -107,7 +107,7 @@ class SavedRecordings: UIViewController, UITableViewDataSource, UITableViewDeleg
             //temporary array to hold the audio files that need to be deleted
             var tempAudioCards = [NSManagedObject]()
             for indexPath in selectedRows  {
-                tempAudioCards.append(audioCards[indexPath.row])
+                    tempAudioCards.append(audioCards[indexPath.row])
             }
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
