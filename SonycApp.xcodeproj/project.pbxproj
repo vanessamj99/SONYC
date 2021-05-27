@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		06A1B8B10BF3DFABB226B2AC /* Pods_SonycApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B05580CC87F80DCEB6199 /* Pods_SonycApp.framework */; };
 		2643CC422519298F00A28D6E /* ButtonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643CC412519298F00A28D6E /* ButtonInformation.swift */; };
-		265D43B024D75C8E0027B148 /* selectLocationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D43AF24D75C8E0027B148 /* selectLocationPopUp.swift */; };
-		265D43B224D75D940027B148 /* identifyPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D43B124D75D940027B148 /* identifyPopUp.swift */; };
-		265D43B424D75DD90027B148 /* confirmedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D43B324D75DD90027B148 /* confirmedPopUp.swift */; };
 		26678FEE24CC651400067A9F /* EqualizationFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26678FED24CC651400067A9F /* EqualizationFilters.swift */; };
 		26678FF024CC654F00067A9F /* Filters&Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26678FEF24CC654F00067A9F /* Filters&Conversions.swift */; };
 		2671C55F24E0758F00AB0DCF /* SavedRecordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2671C55E24E0758F00AB0DCF /* SavedRecordings.swift */; };
@@ -27,7 +24,6 @@
 		269E133024C94EDB00D09E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269E132E24C94EDB00D09E90 /* LaunchScreen.storyboard */; };
 		269E133B24C94EDC00D09E90 /* SonycAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E133A24C94EDC00D09E90 /* SonycAppTests.swift */; };
 		269E134624C94EDC00D09E90 /* SonycAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E134524C94EDC00D09E90 /* SonycAppUITests.swift */; };
-		269E135424C94F6C00D09E90 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E135324C94F6C00D09E90 /* MenuListController.swift */; };
 		269E135624C94F9000D09E90 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E135524C94F9000D09E90 /* AddNewController.swift */; };
 		269E135824C94FB500D09E90 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E135724C94FB500D09E90 /* GaugeView.swift */; };
 		269E135A24C94FC900D09E90 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E135924C94FC900D09E90 /* Colors.swift */; };
@@ -61,9 +57,6 @@
 /* Begin PBXFileReference section */
 		21B91119390A55624E979AF5 /* Pods-SonycAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonycAppTests.release.xcconfig"; path = "Target Support Files/Pods-SonycAppTests/Pods-SonycAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2643CC412519298F00A28D6E /* ButtonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInformation.swift; sourceTree = "<group>"; };
-		265D43AF24D75C8E0027B148 /* selectLocationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectLocationPopUp.swift; sourceTree = "<group>"; };
-		265D43B124D75D940027B148 /* identifyPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = identifyPopUp.swift; sourceTree = "<group>"; };
-		265D43B324D75DD90027B148 /* confirmedPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmedPopUp.swift; sourceTree = "<group>"; };
 		26678FED24CC651400067A9F /* EqualizationFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizationFilters.swift; sourceTree = "<group>"; };
 		26678FEF24CC654F00067A9F /* Filters&Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filters&Conversions.swift"; sourceTree = "<group>"; };
 		2671C55E24E0758F00AB0DCF /* SavedRecordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecordings.swift; sourceTree = "<group>"; };
@@ -85,7 +78,6 @@
 		269E134124C94EDC00D09E90 /* SonycAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonycAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269E134524C94EDC00D09E90 /* SonycAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonycAppUITests.swift; sourceTree = "<group>"; };
 		269E134724C94EDC00D09E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		269E135324C94F6C00D09E90 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		269E135524C94F9000D09E90 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
 		269E135724C94FB500D09E90 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		269E135924C94FC900D09E90 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -167,7 +159,6 @@
 				269E132E24C94EDB00D09E90 /* LaunchScreen.storyboard */,
 				269E133124C94EDB00D09E90 /* Info.plist */,
 				269E132924C94EDA00D09E90 /* SonycApp.xcdatamodeld */,
-				269E135324C94F6C00D09E90 /* MenuListController.swift */,
 				269E135524C94F9000D09E90 /* AddNewController.swift */,
 				269E135724C94FB500D09E90 /* GaugeView.swift */,
 				269E135924C94FC900D09E90 /* Colors.swift */,
@@ -177,9 +168,6 @@
 				269E136324C9507800D09E90 /* ButtonStyling.swift */,
 				26678FED24CC651400067A9F /* EqualizationFilters.swift */,
 				26678FEF24CC654F00067A9F /* Filters&Conversions.swift */,
-				265D43AF24D75C8E0027B148 /* selectLocationPopUp.swift */,
-				265D43B124D75D940027B148 /* identifyPopUp.swift */,
-				265D43B324D75DD90027B148 /* confirmedPopUp.swift */,
 				26748FEB24DF3DAA0071D5AB /* WordsMapping.swift */,
 				2671C55E24E0758F00AB0DCF /* SavedRecordings.swift */,
 				2671C56424E0BB3500AB0DCF /* TableCell.swift */,
@@ -472,24 +460,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				269E135624C94F9000D09E90 /* AddNewController.swift in Sources */,
-				265D43B024D75C8E0027B148 /* selectLocationPopUp.swift in Sources */,
 				26741F4224E9B27E0079C11C /* PlayBackFromRecordings.swift in Sources */,
 				5201CC4324EF1931006532B1 /* MapCardCell.swift in Sources */,
 				269E135A24C94FC900D09E90 /* Colors.swift in Sources */,
 				2643CC422519298F00A28D6E /* ButtonInformation.swift in Sources */,
-				265D43B224D75D940027B148 /* identifyPopUp.swift in Sources */,
 				269E132524C94EDA00D09E90 /* ViewController.swift in Sources */,
 				26678FF024CC654F00067A9F /* Filters&Conversions.swift in Sources */,
 				269E132124C94EDA00D09E90 /* AppDelegate.swift in Sources */,
 				269E136224C9505F00D09E90 /* PlayBackViewController.swift in Sources */,
-				269E135424C94F6C00D09E90 /* MenuListController.swift in Sources */,
 				2671C55F24E0758F00AB0DCF /* SavedRecordings.swift in Sources */,
 				26678FEE24CC651400067A9F /* EqualizationFilters.swift in Sources */,
 				269E136424C9507800D09E90 /* ButtonStyling.swift in Sources */,
 				26748FEC24DF3DAA0071D5AB /* WordsMapping.swift in Sources */,
 				269E132B24C94EDA00D09E90 /* SonycApp.xcdatamodeld in Sources */,
 				269E135E24C9500D00D09E90 /* MapView.swift in Sources */,
-				265D43B424D75DD90027B148 /* confirmedPopUp.swift in Sources */,
 				269E132324C94EDA00D09E90 /* SceneDelegate.swift in Sources */,
 				2671C56524E0BB3500AB0DCF /* TableCell.swift in Sources */,
 				269E136024C9503300D09E90 /* SlideUpView.swift in Sources */,

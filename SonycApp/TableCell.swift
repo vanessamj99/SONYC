@@ -43,7 +43,5 @@ class TableCell: UITableViewCell{
         let dateX = date.frame.origin.x + date.frame.width
         time.frame = CGRect(x: dateX, y: locationY, width: screenWidth/5.5 , height: 40)
         averageDecibels.frame = CGRect(x: average.frame.origin.x - contentView.frame.width/40, y: date.frame.origin.y, width: screenWidth/5, height: contentView.frame.height/2.5)
-//        averageDecibels.sizeToFit()
-//        location.sizeToFit()
     }
 }

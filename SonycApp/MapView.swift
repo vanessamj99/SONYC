@@ -48,7 +48,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //deleteAllData()
         overrideUserInterfaceStyle = .light
         setUpSearchBar()
         getData()
@@ -58,7 +57,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         historyButton.isHidden = true
         tableView.isHidden = true
         
-//        userLocation = locationManager.location
         
         self.setMapview()
         
@@ -125,16 +123,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         let location = CLLocationCoordinate2D(latitude: startLatitude, longitude: startLongitude)
         centerMapOnLocation(location, mapView: mapView)
         
-        //Adding 34th Street and 9th Avenue annotation
-//        let loc = MKPointAnnotation()
-//
-//        loc.coordinate = CLLocationCoordinate2D(latitude: startLatitude, longitude: startLongitude)
-//        loc.title = "Current"
-//
-//
-//
-//        mapView.addAnnotation(loc)
-        
         dataFiltered = data
 
             dropButton.anchorView = searchBar
@@ -164,22 +152,11 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         print("Tapped at lat: \(locationCoordinate.latitude) long: \(locationCoordinate.longitude)")
             
             
-//            let annotations = self.mapView.annotations
-//            self.mapView.removeAnnotations(annotations)
-            
             //removing annotations when a new one is added
             self.mapView.removeAnnotations(mapView.annotations)
             
             plotAnnotation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
             
-            //replots the user location
-//            let currentLoc = MKPointAnnotation()
-//
-//            currentLoc.coordinate = CLLocationCoordinate2D(latitude: startLatitude, longitude: startLongitude)
-//            currentLoc.title = "Current"
-//
-//
-//            mapView.addAnnotation(currentLoc)
             
             newTask.setValue(String(locationCoordinate.latitude), forKey: "reportLatitude")
             newTask.setValue(String(locationCoordinate.longitude), forKey: "reportLongitude")
@@ -197,7 +174,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
                         print(pm.postalCode ?? "none", " ")
                         print(pm.country ?? "none", " ")
                         
-//                        let address = String(pm.name ?? "Unknown number")  + " " + String(pm.subLocality ?? "Unknown number") + " " + " " + String(pm.locality ?? "Unknown number") + ", " + String(pm.postalCode ?? "Unknown number") + ", " + String(pm.country ?? "United States")
                         let address = String(pm.name ?? "Unknown number")  + " " + String(pm.subLocality ?? "Unknown number")
                         
                         let city = String(pm.locality ?? "Unknown number") + ", " + String(pm.postalCode ?? "Unknown number") + ", " + String(pm.country ?? "United States")
@@ -214,11 +190,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
                         
                     }
                     
-//                    if let place = places{
-//                        print(place)
-//
-//
-//                    }
                 }
             }
 
@@ -272,24 +243,13 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         let activeSearch = MKLocalSearch(request: searchRequest)
         
         activeSearch.start{ (response,error) in
-            //activityIndicator.stopAnimating()
-            //UIApplication.shared.endIgnoringInteractionEvents()
             if response == nil {
                 print("Error")
             }else{
-                //let annotations = self.mapView.annotations
-                //self.mapView.removeAnnotations(annotations)
                 
                 let latitude = response?.boundingRegion.center.latitude
                 let longitude = response?.boundingRegion.center.longitude
                 
-                //Creating Annotation and adding annotation to map
-//                let annotation = MKPointAnnotation()
-//                annotation.title = "Map Search"
-//
-//                annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-//
-//                self.mapView.addAnnotation(annotation)
                 
                 //Centering map on coordinate
                 let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
@@ -325,17 +285,8 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         }
         //stores which button was selected when the report was made
         newTask.setValue(button.title(for: .normal), forKey: "locationType")
-        //saving the data stored
-//        savingData()
-//        let _ = navigationController?.popViewController(animated: true)
     }
     
-    //makes the back button hidden
-    /*
-     @IBAction func goBackButtonHidden(button: UIButton) {
-     button.isHidden = true
-     }
-     */
     
     //makes the textbox hidden
     @IBAction func textBoxHidden(textbox: UITextField) {
@@ -348,7 +299,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         for each in data {
             let latitude = each.value(forKey: "latitude")
             let longitude = each.value(forKey: "longitude")
-//            let title = each.value(forKey: "sonycType")
             
             //Creating and plotting the DOB annotation on the map
             plotAnnotation(latitude: latitude as! CLLocationDegrees, longitude: longitude as! CLLocationDegrees)
@@ -365,15 +315,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         mapView.addAnnotation(loc)
         
     }
-//    func plotAnnotation(title: String, latitude: CLLocationDegrees, longitude: CLLocationDegrees){
-//
-//        let loc = MKPointAnnotation()
-//
-//        loc.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        loc.title = title
-//
-//        mapView.addAnnotation(loc)
-//    }
     
     //Function to center map on New York City
     func centerMapOnLocation(_ location: CLLocationCoordinate2D, mapView: MKMapView) {
@@ -425,11 +366,6 @@ class MapView: UIViewController, FloatingPanelControllerDelegate, CLLocationMana
         if reportType == "DOB" || reportType == "AHV" {
             image = UIImage(named: "dob.png")
         }
-//        else if reportType == "311" {
-//            image = UIImage(named: "Logo_311_non color.png")
-//        }else if reportType == "DOT" {
-//            image = UIImage(named: "Logo_Dot_not color.png")
-//        }
         
         return image
     }
@@ -533,31 +469,16 @@ extension MapView: UITableViewDataSource {
         
                 var address: String!
                 var city: String!
-//                var startDate: String!
-//                var endDate: String!
-//                var incidentDate: String!
-        
-//                if api == "DOB" {
-//                    let house = currentRow.value(forKey: "house_num") as! String
-//                    let street = currentRow.value(forKey: "street") as! String
-        print(newTask.value(forKey: "reportAddress"))
                 
         
-//                    address = "\(house) \(street)"
-//        address = "\(String(describing: newTask.value(forKey: "reportAddress")))"
         address = newTask.value(forKey: "reportAddress") as? String ?? "none"
 
-//            ?? "none"
         
         city = newTask.value(forKey: "reportCity") as? String ?? "none"
         
 
         
         let currLocation = getCurrentLocation()
-        
-        
-//        if api == "311" {
-            print("BENCHMARK 3 ---------------------")
 
             cell.configure(
                            address: address,
@@ -584,13 +505,6 @@ extension MapView: UITableViewDelegate{
     
 }
 
-//func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//    let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
-//    if annotation.title == "Current"{
-//        annotationView.glyphImage = UIImage(named: "Location_Original.png")
-//    }
-//    return annotationView
-//}
 func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
    {
        if !(annotation is MKPointAnnotation) {

@@ -41,13 +41,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
         
         //populates the dictionary of images and respected keywords
         fillDict()
-        //for the side menu
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-        menu?.leftSide = true
-        menu?.setNavigationBarHidden(true, animated: false)
-        
-        SideMenuManager.default.leftMenuNavigationController = menu
-        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         recordingSession = AVAudioSession.sharedInstance()
         
         tapToLogin.frame = CGRect(x: screenWidth/2 - (screenWidth/5), y: screenHeight/5, width: screenWidth/2, height: 40)
@@ -61,10 +54,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
         self.view.addSubview(recordButton)
         
         
-        
-        
-        
-        // Do any additional setup after loading the view.
         if let number: Int = UserDefaults.standard.object(forKey: "recordings") as? Int {
             recordings = number
         }
@@ -74,13 +63,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
                 print("Accepted")
             }
         }
-        
-        print(newTask.value(forKey: "reportAddress"), "viewcontroller")
-    }
-    
-    //button for the hamburger that makes the slide out happen
-    @IBAction func didTapHamburger(){
-        present(menu!, animated: true)
     }
     
     //record starts the audioEngine and the recorder and presents the new page
@@ -111,33 +93,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     func loadData(){
         getAHVData()
         getDOBPermitData()
-        //get311Data()
-    }
-    
-    //Function to get 311 API data
-    func get311Data(){
-        print("311")
-        let url = URL(string:"https://data.cityofnewyork.us/resource/erm2-nwe9.json")
-        let task = URLSession.shared.dataTask(with: url!){ (data,response,error) in
-            //Making a call to the API and retrieving the data response
-            guard let dataResponse = data, error == nil else{
-                print(error?.localizedDescription ?? "Response Error")
-                return
-            }
-            print(dataResponse)
-            //Retrieving the json data from the data response returned from the server
-            do{
-                print("hi 311")
-                let jsonResult = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [Dictionary<String, AnyObject>]
-                
-                let apiType = "311"
-                print("BENCHMARK 0 ---------------------")
-                self.saveToCoreData(jsonResponse: jsonResult as Any, api: apiType)
-            }catch let parsingError{
-                print("Error:", parsingError)
-            }
-        }
-        task.resume()
     }
     
     //Function to get DOB permit data
@@ -168,20 +123,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     func getZipcode(location: CLLocation) -> String {
         let geocoder: CLGeocoder = CLGeocoder()
         var zipcode: String!
-        /*
-         geocoder.reverseGeocodeLocation(location) {(placemarks, error) in
-         if error != nil {
-         print("Reverse Geocode Fail: \(error!.localizedDescription)")
-         }
-         
-         guard let placemark = placemarks?.first else {
-         return
-         }
-         print( placemark.postalCode as Any)
-         zipcode = placemark.postalCode
-         }
-         */
-        
         return "10001"
     }
     

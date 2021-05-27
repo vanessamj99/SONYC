@@ -129,8 +129,6 @@ class AddNewController: UIViewController, AVAudioRecorderDelegate, FloatingPanel
         
         recordingSession = AVAudioSession.sharedInstance()
         
-        print(newTask.value(forKey: "reportAddress"), "addnewcontroller")
-        
         do{
             try recordingSession.setPreferredSampleRate(48000)
         }
@@ -236,8 +234,6 @@ class AddNewController: UIViewController, AVAudioRecorderDelegate, FloatingPanel
             newTask.setValue(dateNow, forKey: "date")
             newTask.setValue(timeNow, forKey: "time")
             //saves the data to the persistent container to be accessed later
-//            savingData()
-//            let _ = navigationController?.popViewController(animated: true)
             //end of core data saving
         }
         catch{
