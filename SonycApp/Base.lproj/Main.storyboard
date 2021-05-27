@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FrB-vi-y6e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FrB-vi-y6e">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,7 +76,7 @@
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="saved" rowHeight="140" id="efC-SL-ist" customClass="TableCell" customModule="SonycApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="efC-SL-ist" id="IDS-hb-9o6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
@@ -203,166 +203,6 @@
             </objects>
             <point key="canvasLocation" x="4875.36231884058" y="1073.4375"/>
         </scene>
-        <!--Select Location Pop Up-->
-        <scene sceneID="9of-5C-HHg">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="lYt-Lm-zuk" customClass="selectLocationPopUp" customModule="SonycApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wL4-ef-cLw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTw-nT-PfO">
-                                <rect key="frame" x="40" y="296" width="334" height="285"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Popup_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="emd-un-Lxt">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="285"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="emd-un-Lxt" secondAttribute="bottom" id="2Ez-kD-GDz"/>
-                                    <constraint firstItem="emd-un-Lxt" firstAttribute="top" secondItem="rTw-nT-PfO" secondAttribute="top" id="7dP-2q-g0a"/>
-                                    <constraint firstAttribute="height" constant="285" id="PwE-NT-ro8"/>
-                                    <constraint firstItem="emd-un-Lxt" firstAttribute="leading" secondItem="rTw-nT-PfO" secondAttribute="leading" id="R8e-eU-ekU"/>
-                                    <constraint firstAttribute="trailing" secondItem="emd-un-Lxt" secondAttribute="trailing" id="qmT-pE-zbO"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="IQw-0b-Rfc"/>
-                        <color key="backgroundColor" white="1" alpha="0.50492407570422537" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="IQw-0b-Rfc" firstAttribute="trailing" secondItem="rTw-nT-PfO" secondAttribute="trailing" constant="40" id="WlA-2v-0Lt"/>
-                            <constraint firstItem="rTw-nT-PfO" firstAttribute="leading" secondItem="IQw-0b-Rfc" secondAttribute="leading" constant="40" id="lMl-O4-Y2U"/>
-                            <constraint firstItem="rTw-nT-PfO" firstAttribute="top" secondItem="IQw-0b-Rfc" secondAttribute="top" constant="252" id="nb6-Ad-6qV"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="popUpView" destination="rTw-nT-PfO" id="eTn-qs-ytP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OZg-oT-dUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1564" y="-783"/>
-        </scene>
-        <!--Confirmed Pop Up-->
-        <scene sceneID="vSf-WE-Gne">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Cdt-TQ-1rs" customClass="confirmedPopUp" customModule="SonycApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zif-QF-yyg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AwI-0q-P7Q">
-                                <rect key="frame" x="40" y="296" width="334" height="285"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Confirm.png" translatesAutoresizingMaskIntoConstraints="NO" id="LKv-QS-SSI">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="285"/>
-                                    </imageView>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krq-Wr-cR4">
-                                        <rect key="frame" x="108.5" y="231" width="117" height="48"/>
-                                        <color key="backgroundColor" red="0.22726470230000001" green="0.35688644650000001" blue="0.55296289919999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="117" id="bPN-Ym-ymf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Ok">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closePopUp:" destination="Cdt-TQ-1rs" eventType="touchUpInside" id="s6v-ea-R8h"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="krq-Wr-cR4" firstAttribute="top" secondItem="AwI-0q-P7Q" secondAttribute="top" constant="231" id="NJK-AZ-Yad"/>
-                                    <constraint firstItem="LKv-QS-SSI" firstAttribute="leading" secondItem="AwI-0q-P7Q" secondAttribute="leading" id="U62-A2-ZZ2"/>
-                                    <constraint firstAttribute="bottom" secondItem="LKv-QS-SSI" secondAttribute="bottom" id="VQS-l0-yn4"/>
-                                    <constraint firstItem="krq-Wr-cR4" firstAttribute="centerX" secondItem="LKv-QS-SSI" secondAttribute="centerX" id="YpY-wc-arN"/>
-                                    <constraint firstItem="LKv-QS-SSI" firstAttribute="top" secondItem="AwI-0q-P7Q" secondAttribute="top" id="b3h-zM-4xC"/>
-                                    <constraint firstAttribute="height" constant="285" id="gPB-sb-5Ia"/>
-                                    <constraint firstAttribute="trailing" secondItem="LKv-QS-SSI" secondAttribute="trailing" id="mMw-2b-I6h"/>
-                                    <constraint firstAttribute="bottom" secondItem="krq-Wr-cR4" secondAttribute="bottom" constant="6" id="py5-OF-r0H"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="EbX-IV-Fde"/>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EbX-IV-Fde" firstAttribute="trailing" secondItem="AwI-0q-P7Q" secondAttribute="trailing" constant="40" id="WW7-8W-HNg"/>
-                            <constraint firstItem="AwI-0q-P7Q" firstAttribute="top" secondItem="EbX-IV-Fde" secondAttribute="top" constant="252" id="htF-IL-fQg"/>
-                            <constraint firstItem="AwI-0q-P7Q" firstAttribute="leading" secondItem="EbX-IV-Fde" secondAttribute="leading" constant="40" id="mSH-ec-lvt"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="8Ug-D5-VbK"/>
-                    <connections>
-                        <outlet property="okButton" destination="krq-Wr-cR4" id="gIs-KN-wId"/>
-                        <outlet property="popUpView" destination="AwI-0q-P7Q" id="Q7v-fN-9qq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ie-Nk-lUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="431.8840579710145" y="-783.48214285714278"/>
-        </scene>
-        <!--Identify Pop Up-->
-        <scene sceneID="bqO-fI-oWw">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="miQ-8t-44U" customClass="identifyPopUp" customModule="SonycApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="acA-VL-7TI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkC-xO-7TA">
-                                <rect key="frame" x="40" y="274" width="334" height="330"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Identify with help.png" translatesAutoresizingMaskIntoConstraints="NO" id="kPC-kT-Pvf">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="330"/>
-                                    </imageView>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-xr-ly3">
-                                        <rect key="frame" x="88" y="270" width="155" height="55"/>
-                                        <color key="backgroundColor" red="0.22726470230000001" green="0.35688644650000001" blue="0.55296289919999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="Ojl-Yg-iF9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Got it">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closePopUp:" destination="miQ-8t-44U" eventType="touchUpInside" id="QCx-R7-Azc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="LIQ-xr-ly3" firstAttribute="leading" secondItem="kkC-xO-7TA" secondAttribute="leading" constant="88" id="8PV-Cl-tVX"/>
-                                    <constraint firstAttribute="bottom" secondItem="kPC-kT-Pvf" secondAttribute="bottom" id="Db9-yk-3jQ"/>
-                                    <constraint firstItem="kPC-kT-Pvf" firstAttribute="top" secondItem="kkC-xO-7TA" secondAttribute="top" id="GJi-F8-WSe"/>
-                                    <constraint firstAttribute="height" constant="330" id="I4W-Up-0HX"/>
-                                    <constraint firstItem="LIQ-xr-ly3" firstAttribute="top" secondItem="kkC-xO-7TA" secondAttribute="top" constant="270" id="dJX-SX-uXK"/>
-                                    <constraint firstItem="kPC-kT-Pvf" firstAttribute="leading" secondItem="kkC-xO-7TA" secondAttribute="leading" id="glx-49-SQ2"/>
-                                    <constraint firstAttribute="trailing" secondItem="kPC-kT-Pvf" secondAttribute="trailing" id="haV-xw-dme"/>
-                                    <constraint firstAttribute="trailing" secondItem="LIQ-xr-ly3" secondAttribute="trailing" constant="91" id="xBZ-2v-BHL"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="erL-Fb-7c4"/>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="kkC-xO-7TA" firstAttribute="top" secondItem="erL-Fb-7c4" secondAttribute="top" constant="230" id="Q5I-Mq-rQi"/>
-                            <constraint firstItem="erL-Fb-7c4" firstAttribute="trailing" secondItem="kkC-xO-7TA" secondAttribute="trailing" constant="40" id="S7b-mv-Ass"/>
-                            <constraint firstItem="kkC-xO-7TA" firstAttribute="leading" secondItem="erL-Fb-7c4" secondAttribute="leading" constant="40" id="vtA-4Q-dFv"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="gotItButton" destination="LIQ-xr-ly3" id="aaw-Y9-PPi"/>
-                        <outlet property="popUpView" destination="kkC-xO-7TA" id="j7h-1g-Uzf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JlQ-BI-zcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-630.43478260869574" y="-783.48214285714278"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hyH-eN-yFg">
             <objects>
@@ -439,7 +279,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mapCardCell" id="5rQ-0k-pZ9" customClass="MapCardCell" customModule="SonycApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5rQ-0k-pZ9" id="sBH-cZ-3GY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -626,9 +466,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Card_Confirm.png" width="298" height="308"/>
-        <image name="Card_Identify with help.png" width="295" height="338"/>
-        <image name="Card_Popup_1.png" width="295" height="282"/>
         <image name="Hamburger.png" width="26" height="18"/>
         <image name="Icon_History.png" width="21" height="21"/>
         <image name="Icon_History_original.png" width="16" height="16"/>
